@@ -1,0 +1,31 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+target/
+.classpath
+.project
+.settings/
+
+# Compiled files
+*.class
+*.jar
+*.war
+
+# Logs
+*.log
+*.log.*
+
+# Database
+*.db
+*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Application generated files
+employees_export_*.csv
+application.log
