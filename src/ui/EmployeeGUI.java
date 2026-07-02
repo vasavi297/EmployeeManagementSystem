@@ -8,7 +8,6 @@ import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
-
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -73,6 +72,7 @@ public class EmployeeGUI extends JFrame {
             e.printStackTrace();
         }
     }
+
     private void createMenuBar() {
         JMenuBar menuBar = new JMenuBar();
         menuBar.setBackground(new Color(20, 30, 60));
@@ -110,34 +110,6 @@ public class EmployeeGUI extends JFrame {
         exitItem.setBackground(new Color(20, 30, 60));
         exitItem.addActionListener(e -> System.exit(0));
         fileMenu.add(exitItem);
-
-        // ========== EMPLOYEE MENU ==========
-        JMenu employeeMenu = new JMenu("Employee");
-        employeeMenu.setForeground(textColor);
-        employeeMenu.setFont(menuFont);
-
-        JMenuItem addMenuItem = new JMenuItem("Add New Employee");
-        addMenuItem.setFont(itemFont);
-        addMenuItem.setForeground(textColor);
-        addMenuItem.setBackground(new Color(20, 30, 60));
-        addMenuItem.addActionListener(e -> clearAndFocus());
-        employeeMenu.add(addMenuItem);
-
-        JMenuItem viewAllItem = new JMenuItem("View All");
-        viewAllItem.setFont(itemFont);
-        viewAllItem.setForeground(textColor);
-        viewAllItem.setBackground(new Color(20, 30, 60));
-        viewAllItem.addActionListener(e -> loadEmployeeData());
-        employeeMenu.add(viewAllItem);
-
-        employeeMenu.addSeparator();
-
-        JMenuItem searchItem = new JMenuItem("Search");
-        searchItem.setFont(itemFont);
-        searchItem.setForeground(textColor);
-        searchItem.setBackground(new Color(20, 30, 60));
-        searchItem.addActionListener(e -> searchField.requestFocus());
-        employeeMenu.add(searchItem);
 
         // ========== REPORTS MENU ==========
         JMenu reportsMenu = new JMenu("Reports");
@@ -185,13 +157,13 @@ public class EmployeeGUI extends JFrame {
 
         // ========== ADD TO MENU BAR ==========
         menuBar.add(fileMenu);
-        menuBar.add(employeeMenu);
         menuBar.add(reportsMenu);
         menuBar.add(Box.createHorizontalGlue());
         menuBar.add(helpMenu);
 
         setJMenuBar(menuBar);
     }
+
     private void createHeaderPanel() {
         JPanel headerPanel = new JPanel(new BorderLayout());
         headerPanel.setBackground(HEADER_BG);
@@ -250,21 +222,18 @@ public class EmployeeGUI extends JFrame {
 
         mainPanel.add(splitPane, BorderLayout.CENTER);
         add(mainPanel, BorderLayout.CENTER);
-
     }
- 
 
     private JPanel createToolbar() {
         JPanel toolbar = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 8));
 
-        // Professional Dark Blue Toolbar
         toolbar.setBackground(new Color(40, 53, 147));
         toolbar.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(30, 40, 100)),
                 BorderFactory.createEmptyBorder(8, 15, 8, 15)
         ));
 
-        // ===== Refresh Button - Green =====
+        // ===== Refresh Button =====
         refreshButton = createStyledButton("🔄 Refresh", new Color(76, 175, 80), Color.WHITE);
         refreshButton.setFont(new Font("Segoe UI", Font.BOLD, 13));
         refreshButton.addActionListener(e -> loadEmployeeData());
@@ -289,37 +258,36 @@ public class EmployeeGUI extends JFrame {
         ));
         toolbar.add(searchField);
 
-        // ===== Search Button - Orange =====
         JButton searchBtn = createStyledButton("Search", new Color(255, 152, 0), Color.WHITE);
         searchBtn.setFont(new Font("Segoe UI", Font.BOLD, 13));
         searchBtn.addActionListener(e -> searchEmployees(searchField.getText()));
         toolbar.add(searchBtn);
 
-        // ===== Clear Search Button - Gray =====
-        JButton clearSearchBtn = createStyledButton("✕", new Color(158, 158, 158), Color.WHITE);
-        clearSearchBtn.setFont(new Font("Segoe UI", Font.BOLD, 14));
-        clearSearchBtn.setPreferredSize(new Dimension(40, 35));
-        clearSearchBtn.addActionListener(e -> {
-            searchField.setText("");
-            loadEmployeeData();
-        });
-        toolbar.add(clearSearchBtn);
+        // ===== CLEAR SEARCH BUTTON - REMOVED =====
+        // JButton clearSearchBtn = createStyledButton("✕", new Color(158, 158, 158), Color.WHITE);
+        // clearSearchBtn.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        // clearSearchBtn.setPreferredSize(new Dimension(40, 35));
+        // clearSearchBtn.addActionListener(e -> {
+        //     searchField.setText("");
+        //     loadEmployeeData();
+        // });
+        // toolbar.add(clearSearchBtn);
 
         toolbar.add(createSeparator());
 
-        // ===== Statistics Button - Purple =====
+        // ===== Statistics Button =====
         statsButton = createStyledButton("📊 Statistics", new Color(156, 39, 176), Color.WHITE);
         statsButton.setFont(new Font("Segoe UI", Font.BOLD, 13));
         statsButton.addActionListener(e -> showStatistics());
         toolbar.add(statsButton);
 
-        // ===== Charts Dashboard Button - Cyan =====
+        // ===== Charts Button =====
         JButton chartBtn = createStyledButton("📈 Charts", new Color(0, 188, 212), Color.WHITE);
         chartBtn.setFont(new Font("Segoe UI", Font.BOLD, 13));
         chartBtn.addActionListener(e -> showCharts());
         toolbar.add(chartBtn);
 
-        // ===== Export CSV Button - Teal =====
+        // ===== Export CSV Button =====
         exportButton = createStyledButton("📤 Export CSV", new Color(0, 150, 136), Color.WHITE);
         exportButton.setFont(new Font("Segoe UI", Font.BOLD, 13));
         exportButton.addActionListener(e -> exportData());
@@ -327,16 +295,14 @@ public class EmployeeGUI extends JFrame {
 
         toolbar.add(createSeparator());
 
-        // ===== Department Report Button - Red =====
+        // ===== Department Report Button =====
         JButton deptBtn = createStyledButton("🏢 Departments", new Color(244, 67, 54), Color.WHITE);
         deptBtn.setFont(new Font("Segoe UI", Font.BOLD, 13));
         deptBtn.addActionListener(e -> showDepartmentReport());
         toolbar.add(deptBtn);
 
-        // ===== Add Spacer to push right side items =====
         toolbar.add(Box.createHorizontalGlue());
 
-        // ===== Right side - Employee Count =====
         JLabel countLabel = new JLabel("👥 " + employeeDAO.getEmployeeCount() + " Employees");
         countLabel.setFont(new Font("Segoe UI", Font.BOLD, 14));
         countLabel.setForeground(Color.WHITE);
@@ -344,6 +310,7 @@ public class EmployeeGUI extends JFrame {
 
         return toolbar;
     }
+
     private JPanel createTablePanel() {
         JPanel panel = new JPanel(new BorderLayout(0, 5));
         panel.setBackground(CARD_COLOR);
@@ -373,14 +340,12 @@ public class EmployeeGUI extends JFrame {
         employeeTable.setShowGrid(true);
         employeeTable.setGridColor(new Color(240, 240, 240));
 
-        // Table Header Styling - VISIBLE
         JTableHeader header = employeeTable.getTableHeader();
         header.setFont(new Font("Segoe UI", Font.BOLD, 13));
         header.setBackground(TABLE_HEADER_BG);
         header.setForeground(Color.WHITE);
         header.setPreferredSize(new Dimension(0, 35));
 
-        // Header Renderer to ensure visibility
         header.setDefaultRenderer(new DefaultTableCellRenderer() {
             @Override
             public Component getTableCellRendererComponent(JTable table, Object value,
@@ -394,7 +359,6 @@ public class EmployeeGUI extends JFrame {
             }
         });
 
-        // Column widths
         employeeTable.getColumnModel().getColumn(0).setPreferredWidth(50);
         employeeTable.getColumnModel().getColumn(1).setPreferredWidth(150);
         employeeTable.getColumnModel().getColumn(2).setPreferredWidth(120);
@@ -575,11 +539,45 @@ public class EmployeeGUI extends JFrame {
         }
         updateStatus("Loaded " + employees.size() + " employees", true);
         updateRecordCount(employees.size());
+
+        // Update header employee count
+        updateHeaderEmployeeCount();
     }
 
     private void updateRecordCount(int count) {
         if (recordCountLabel != null) {
             recordCountLabel.setText("Showing " + count + " records");
+        }
+    }
+
+    private void updateHeaderEmployeeCount() {
+        // Update the header panel total employees count
+        Component[] components = getContentPane().getComponents();
+        for (Component comp : components) {
+            if (comp instanceof JPanel) {
+                JPanel panel = (JPanel) comp;
+                if (panel.getBackground().equals(HEADER_BG)) {
+                    // Find the stats panel
+                    Component[] headerComponents = panel.getComponents();
+                    for (Component headerComp : headerComponents) {
+                        if (headerComp instanceof JPanel) {
+                            JPanel statsPanel = (JPanel) headerComp;
+                            if (statsPanel.getLayout() instanceof FlowLayout) {
+                                Component[] statsComponents = statsPanel.getComponents();
+                                for (Component statComp : statsComponents) {
+                                    if (statComp instanceof JLabel) {
+                                        JLabel label = (JLabel) statComp;
+                                        if (label.getText().startsWith("Total Employees:")) {
+                                            label.setText("Total Employees: " + employeeDAO.getEmployeeCount());
+                                            return;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -892,7 +890,6 @@ public class EmployeeGUI extends JFrame {
                 "PDF Export",
                 JOptionPane.INFORMATION_MESSAGE);
 
-        // Simple CSV fallback
         exportData();
     }
 
@@ -976,7 +973,6 @@ public class EmployeeGUI extends JFrame {
                     colorIndex++;
                 }
 
-                // Legend
                 int legendY = 20;
                 colorIndex = 0;
                 g.setFont(new Font("Segoe UI", Font.PLAIN, 11));

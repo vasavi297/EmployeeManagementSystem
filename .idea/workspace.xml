@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcb49e3f-30a6-432a-ba9a-e2ebbd35d34c" name="Changes" comment="" />
+    <list default="true" id="fcb49e3f-30a6-432a-ba9a-e2ebbd35d34c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/EmployeeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/EmployeeGUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,23 +29,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.1878648279715598" />
-      <entry key="MS500" value="3.328897867623754" />
-      <entry key="S2" value="8.684915313993422" />
-      <entry key="S5" value="12.9025889429086" />
-      <entry key="S10" value="15.126068698054615" />
-      <entry key="S30" value="16.97832919190084" />
-      <entry key="S60" value="17.824009392529767" />
-      <entry key="M2" value="19.19499052628867" />
-      <entry key="M5" value="21.390882783235746" />
-      <entry key="M10" value="22.968119049040393" />
-      <entry key="M15" value="23.893067573111388" />
-      <entry key="M30" value="25.463282013267712" />
-      <entry key="H1" value="26.814664931499507" />
-      <entry key="H2" value="27.765767120340495" />
-      <entry key="H4" value="28.341157761183435" />
-      <entry key="D1" value="28.883756166573406" />
-      <entry key="W1" value="28.983226922352944" />
+      <entry key="MS100" value="1.4083797235325888" />
+      <entry key="MS500" value="3.904132612823797" />
+      <entry key="S2" value="6.929422782478675" />
+      <entry key="S5" value="8.066559520823379" />
+      <entry key="S10" value="8.51335245205511" />
+      <entry key="S30" value="8.833105662319724" />
+      <entry key="S60" value="8.91600864249123" />
+      <entry key="M2" value="9.005875338666442" />
+      <entry key="M5" value="11.814212647026181" />
+      <entry key="M10" value="20.2265636423172" />
+      <entry key="M15" value="26.94084446918723" />
+      <entry key="M30" value="38.06585266761586" />
+      <entry key="H1" value="46.43147459039746" />
+      <entry key="H2" value="51.711190205823435" />
+      <entry key="H4" value="54.71183854467786" />
+      <entry key="D1" value="57.43021304008453" />
+      <entry key="W1" value="57.91804317360538" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -63,29 +67,29 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1143573655059251" />
-      <entry key="MS500" value="3.2838372452032063" />
-      <entry key="S2" value="8.649634086496226" />
-      <entry key="S5" value="12.87979593846936" />
-      <entry key="S10" value="15.112313074900012" />
-      <entry key="S30" value="16.973069892054642" />
-      <entry key="S60" value="17.82113303718176" />
-      <entry key="M2" value="19.193258648451007" />
-      <entry key="M5" value="21.38959831776057" />
-      <entry key="M10" value="22.966734882750973" />
-      <entry key="M15" value="23.891693502046706" />
-      <entry key="M30" value="25.46208198739003" />
-      <entry key="H1" value="26.813782241139396" />
-      <entry key="H2" value="27.765211915373925" />
-      <entry key="H4" value="28.340843289729488" />
-      <entry key="D1" value="28.88369771371625" />
-      <entry key="W1" value="28.983218410294622" />
+      <entry key="MS100" value="1.339111693469254" />
+      <entry key="MS500" value="3.8161357066071293" />
+      <entry key="S2" value="6.883679889039269" />
+      <entry key="S5" value="8.04507243027749" />
+      <entry key="S10" value="8.50200526131428" />
+      <entry key="S30" value="8.8291816643" />
+      <entry key="S60" value="8.91402844469072" />
+      <entry key="M2" value="9.004875775997204" />
+      <entry key="M5" value="11.813664083044504" />
+      <entry key="M10" value="20.22588437118083" />
+      <entry key="M15" value="26.94002686065107" />
+      <entry key="M30" value="38.06492273324473" />
+      <entry key="H1" value="46.43067522394414" />
+      <entry key="H2" value="51.710643277843914" />
+      <entry key="H4" value="54.71151492536866" />
+      <entry key="D1" value="57.43015060390719" />
+      <entry key="W1" value="57.918034022542" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3Fu7CapxdXseSUrgXCSjCnAtx1m" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -94,32 +98,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.EmployeeGUI.executor": "Debug",
-    "Application.Main.executor": "Run",
-    "Application.ui.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/pkmva/IdeaProjects/EmployeeManagementSystem/src/Main.java",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.EmployeeGUI.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ui.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/pkmva/IdeaProjects/EmployeeManagementSystem/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.ui.Main">
     <configuration name="EmployeeGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui.EmployeeGUI" />
